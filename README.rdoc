@@ -2,6 +2,8 @@
 
 A simple Rails app to find Github repo's issue info from repo URL. Scraping using Nokogiri gem is used to get data about repo.
 
+App deployed on Heroku: https://pacific-plains-9125.herokuapp.com
+
 ==== Possible improvements
 
 Instead of doing the scrapping in the request cycle, do as background. Also, maintain an expiring cache of scraped results.
