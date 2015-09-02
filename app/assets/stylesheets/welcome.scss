@@ -1,0 +1,52 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container{
+  margin-top: 30px;
+}
+
+.green.btn {
+  color: #FFFFFF;
+  background-color: #26a69a;
+}
+
+.green.btn:hover, .green.btn:focus, .green.btn:active, .green.btn.active {
+  color: #FFFFFF;
+  background-color: #1f897f;
+}
+
+.form-control {
+  box-shadow: none!important;
+  border-radius: 0!important;
+}
+
+#result {
+  margin-top: 30px;
+
+  .panel-body {
+    font-size: 1.7em;
+    text-align: center;
+  }
+}
+
+#loading {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.glyphicon-refresh-animate {
+  -animation: spin .7s infinite linear;
+  -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from { -webkit-transform: rotate(0deg);}
+  to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg);}
+  to { transform: scale(1) rotate(360deg);}
+}

@@ -1,0 +1,67 @@
+<div class="container">
+  <h2 class="text-center">Github Repo Info</h2>
+  <p class="text-center">Grab info about a repo by entering it's public URL in textbox below.</p>
+  <br><br>
+
+	<div class="row">
+    <div class="col-lg-3"></div>
+		<div class="col-lg-6">
+      <form id="data-grabber" method="post">
+        <div class="input-group custom-search-form">
+          <input type="text" class="form-control" placeholder="Github repo URL here" id="github-url">
+          <span class="input-group-btn">
+            <button class="btn btn-default green" type="submit">
+              <span class="glyphicon glyphicon-ok"></span> Get Info
+            </button>
+         </span>
+         </div>
+       </form>
+      </div>
+      <div class="col-lg-3"></div>
+	</div>
+
+  <div id="loading" class="hide">
+    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+  </div>
+
+  <div id="result" class="hide">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel panel-primary" id="total-open">
+          <div class="panel-heading">
+            <h3 class="panel-title">Total number of open issues</h3>
+          </div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-success" id="total-open-24h">
+          <div class="panel-heading">
+            <h3 class="panel-title">Number of open issues that were opened in the last 24 hours</h3>
+          </div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-info" id="total-open-7d">
+          <div class="panel-heading">
+            <h3 class="panel-title">Number of open issues that were opened more than 7 days ago </h3>
+          </div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-warning" id="total-open-7d-24h">
+          <div class="panel-heading">
+            <h3 class="panel-title">Number of open issues that were opened more than 24 hours ago but less than 7 days ago</h3>
+          </div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
