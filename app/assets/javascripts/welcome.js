@@ -47,6 +47,10 @@ $(function(){
                timeout: 4000,
                type: 'error'
             });
+
+            // Hide everything
+            $("#loading").addClass("hide");
+            $("#result").addClass("hide");
           }
         },
         error: function() {
@@ -56,6 +60,10 @@ $(function(){
              timeout: 4000,
              type: 'error'
           });
+
+          // Hide everything
+          $("#loading").addClass("hide");
+          $("#result").addClass("hide");
         }
       });
     }
