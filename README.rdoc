@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Rails app to find Github repo's issue info from repo URL. Scraping using Nokogiri gem is used to get data about repo.
 
-Things you may want to cover:
+==== Possible improvements
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Instead of doing the scrapping in the request cycle, do as background. Also, maintain an expiring cache of scraped results.
