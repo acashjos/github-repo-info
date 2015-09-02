@@ -8,13 +8,17 @@ $(function(){
     var github_url = $("#github-url").val();
 
     // Do some basic validation on input
-    if(github_url.length < 4){
+    if(github_url.length < 4 || !github_url.replace(/\/+$/, "")+"/".match("^(http(s)?:\/\/)?([\w]+\.)?github\.com\/(.*)\/(.*)\/$")){
       noty({
          text: 'The Github URL you entered seems invalid!',
          layout: 'topRight',
          timeout: 4000,
          type: 'error'
       });
+
+      // Hide everything
+      $("#loading").addClass("hide");
+      $("#result").addClass("hide");
     }
     else{
       // Show loading indicator
