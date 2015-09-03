@@ -18,7 +18,7 @@ class WelcomeController < ApplicationController
         # Get repo name from URL
         repo_name = resp_data['url'].gsub(/(http(s)?:\/\/)?([\w]+\.)?github\.com\//, "")
         # Generate API URL
-        url = "https://api.github.com/search/issues?q=repo:"+repo_name+'+state:open'
+        url = "https://api.github.com/search/issues?q=repo:"+repo_name+'+is:open+is:issue'
         # Find ISO8601 format date inorder to send with request
         h24 = (Time.now.utc - 24*60*60).iso8601
         d7 = (Time.now.utc - 24*60*60*7).iso8601
