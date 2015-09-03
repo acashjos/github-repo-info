@@ -25,19 +25,19 @@ class WelcomeController < ApplicationController
 
         # Scrape open issues
         response = Net::HTTP.get_response(URI.parse(url))
-        open_issues = JSON.load(response.body)['total_count']
+        open_issues = JSON.load(response.body)['total_count'].to_i
 
         # Scrape issues opened in last 24hrs
         response = Net::HTTP.get_response(URI.parse(URI::encode(url+'+created:>='+h24)))
-        open_issue_24h = JSON.load(response.body)['total_count']
+        open_issue_24h = JSON.load(response.body)['total_count'].to_i
 
         # Scrape issues opened in last 7days
         response = Net::HTTP.get_response(URI.parse(URI::encode(url+'+created:<='+d7)))
-        open_issue_7d = JSON.load(response.body)['total_count']
+        open_issue_7d = JSON.load(response.body)['total_count'].to_i
 
         # Scrape open issues within last 7days and 24hr
         response = Net::HTTP.get_response(URI.parse(URI::encode(url+'+created:'+d7+'..'+h24)))
-        open_issue_7d_24h = JSON.load(response.body)['total_count']
+        open_issue_7d_24h = JSON.load(response.body)['total_count'].to_i
 
         # feed into resp hash
         resp_data['open_issues'] = open_issues
